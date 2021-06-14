@@ -1,0 +1,120 @@
+/* ## Colors
+
+### Primary */
+:root {
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+  --Dark-cyan: hsl(185, 75%, 39%);
+
+  /* ### Neutral */
+
+  --Dark-gray: hsl(0, 0%, 59%);
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Kumbh Sans";
+}
+.main {
+  background-color: var(--Dark-cyan);
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: -50vh;
+  left: -50vw;
+  height: 100vh;
+  width: 100vw;
+  border-radius: 0 0 50% 0;
+  background-image: linear-gradient(to right, #22a0b5, #2ebec6);
+}
+
+.main::after {
+  content: "";
+  position: absolute;
+  bottom: -25vh;
+  right: -20vw;
+  height: 75vh;
+  width: 75vw;
+  border-radius: 50vw 50% 0 0;
+  background-image: linear-gradient(to left, #22a0b5, #2ebec6);
+}
+
+.card {
+  z-index: 1;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  background-image: linear-gradient(#2ebec6 40%, white 40%, white 70%);
+}
+
+.card .card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 25%;
+}
+.card-data img {
+  border-radius: 50%;
+  border: 3px solid white;
+  position: relative;
+}
+.card-data .main-info {
+  display: flex;
+  align-items: flex-start;
+}
+.card-data .main-info h1 {
+  font-size: 18px;
+}
+.card-data .main-info p {
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.city {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card-data .info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-top: 1px solid #eee;
+}
+.card-data .info .info-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-data .info .info-element h2 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.card-data .info .info-element p {
+  margin-top: 0;
+  color: darkgrey;
+}
+
+.attribution {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  text-decoration: none;
+  color: white;
+  width: fit-content;
+}
